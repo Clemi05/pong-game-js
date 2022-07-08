@@ -4,6 +4,6 @@ export default class Ball {
   }
 
   update(delta) {
-
+    // TODO
   }
 }

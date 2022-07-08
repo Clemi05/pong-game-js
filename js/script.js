@@ -17,4 +17,4 @@ function update(time) {
 
 window.requestAnimationFrame(update);
 
-/* Restart at 12:00min */
+/* Restart at 15:00min */
