@@ -3,17 +3,26 @@ export default class Ball {
     this.ballElement = ballElement;
   }
 
-  /* Getter */
+  /* Getter and Setter of x */
   get x() {
     return parseFloat(getComputedStyle(this.ballElement).getPropertyValue("--x"));
   }
 
-  /* Setter */
   set x(value) {
     this.ballElement.style.setProperty("--x", value);
   }
 
+  /* Getter and Setter of y*/
+  get y() {
+    return parseFloat(getComputedStyle(this.ballElement).getPropertyValue("--y"));
+  }
+
+  set y(value) {
+    this.ballElement.style.setProperty("--y", value);
+  }
+
   update(delta) {
     this.x = 5;
+    this.y = 15;
   }
 }
