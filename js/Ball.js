@@ -1,6 +1,7 @@
 export default class Ball {
   constructor(ballElement ) {
     this.ballElement = ballElement;
+    this.reset();
   }
 
   /* Getter and Setter of x */
@@ -19,6 +20,13 @@ export default class Ball {
 
   set y(value) {
     this.ballElement.style.setProperty("--y", value);
+  }
+
+  reset() {
+    this.x = 50;
+    this.y = 50;
+    this.direction = {x: 0.75, y: 0.5};
+    // TODO
   }
 
   update(delta) {
