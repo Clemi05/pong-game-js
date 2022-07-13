@@ -38,3 +38,7 @@ export default class Ball {
     this.y = 15;
   }
 }
+
+function randomNumberBetween(min, max) {
+  return Math.random() * (max - min) + min;
+}
