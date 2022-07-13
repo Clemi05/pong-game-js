@@ -16,5 +16,3 @@ function update(time) {
 }
 
 window.requestAnimationFrame(update);
-
-/* Restart at 15:00min */
