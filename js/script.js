@@ -16,4 +16,9 @@ function update(time) {
   window.requestAnimationFrame(update);
 }
 
+document.addEventListener("mousemove", event => {
+  // Convert to percentage
+  playerPaddle.position = (event.y /window.innerHeight) * 100;
+})
+
 window.requestAnimationFrame(update);
