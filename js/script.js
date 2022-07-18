@@ -1,5 +1,6 @@
 /* Imports */
 import Ball from "./Ball.js";
+import Paddle from "./Paddle.js";
 
 const ball = new Ball(document.getElementById("ball"));
 const playerPaddle = new Paddle(document.getElementById("player-paddle"));
@@ -10,6 +11,7 @@ function update(time) {
   if (lastTime != null) {
     const delta = time - lastTime;
     // ball.update(delta);
+    computerPaddle.update(delta, ball.y);
   }
 
   lastTime = time;

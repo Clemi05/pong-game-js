@@ -1,6 +1,9 @@
+const MAX_SPEED = 0.02;
+
 export default class Paddle {
   constructor(paddleElement) {
     this.paddleElement = paddleElement;
+    this.reset();
   }
 
 
@@ -10,5 +13,13 @@ export default class Paddle {
 
   set position(value) {
     this.paddleElement.style.setProperty("--position", value);
+  }
+
+  reset() {
+    this.position = 50;
+  }
+
+  update(delta, ballHeight) {
+    this.position += MAX_SPEED * delta * (ballHeight - this.position);
   }
 }
