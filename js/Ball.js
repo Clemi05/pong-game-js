@@ -46,7 +46,7 @@ export default class Ball {
   }
 
   /* Method that handle velocity and the bouncing against the wall of the ball */
-  update(delta) {
+  update(delta, paddleRects) {
     this.x += this.direction.x * this.velocity * delta;
     this.y += this.direction.y * this.velocity * delta;
     this.velocity += VELOCITY_INCREASE * delta;
